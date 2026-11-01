@@ -1,0 +1,17 @@
+{
+  "review_target": "output\\review-fix\\demo_buggy.py",
+  "审查-修复循环#iter": 2,
+  "review": {
+    "target": "output\\review-fix\\demo_buggy.py",
+    "issues": [],
+    "passed": true,
+    "report": "【代码审查报告】output\\review-fix\\demo_buggy.py\n统计：0 个类，4 个函数。\n未检测到明显问题，代码风格良好。",
+    "source": "offline"
+  },
+  "fix": {
+    "target": "output\\review-fix\\demo_buggy.py",
+    "fixed_count": 0,
+    "unfixable": [],
+    "source": "offline"
+  }
+}

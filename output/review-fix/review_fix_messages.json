@@ -1,0 +1,113 @@
+[
+  {
+    "sender": "review_agent",
+    "receiver": "next",
+    "kind": "review",
+    "payload": {
+      "agent": "review_agent",
+      "result": {
+        "target": "output\\review-fix\\demo_buggy.py",
+        "issues": [
+          {
+            "type": "missing_docstring",
+            "line": 1,
+            "text": "第 1 行 函数 `add` 缺少 docstring。",
+            "fixable": true
+          },
+          {
+            "type": "missing_docstring",
+            "line": 5,
+            "text": "第 5 行 函数 `load_config` 缺少 docstring。",
+            "fixable": true
+          },
+          {
+            "type": "missing_docstring",
+            "line": 11,
+            "text": "第 11 行 函数 `safe_div` 缺少 docstring。",
+            "fixable": true
+          },
+          {
+            "type": "missing_docstring",
+            "line": 18,
+            "text": "第 18 行 函数 `main` 缺少 docstring。",
+            "fixable": true
+          },
+          {
+            "type": "bare_except",
+            "line": 14,
+            "text": "第 14 行 存在裸 `except:`，应捕获具体异常。",
+            "fixable": true
+          },
+          {
+            "type": "hardcoded_secret",
+            "line": 6,
+            "text": "第 6 行 疑似硬编码密钥/密码，应改为环境变量或配置读取。",
+            "fixable": true
+          },
+          {
+            "type": "hardcoded_secret",
+            "line": 7,
+            "text": "第 7 行 疑似硬编码密钥/密码，应改为环境变量或配置读取。",
+            "fixable": true
+          },
+          {
+            "type": "todo_comment",
+            "line": 19,
+            "text": "第 19 行 存在 TODO/FIXME 待办注释。",
+            "fixable": true
+          }
+        ],
+        "passed": false,
+        "report": "【代码审查报告】output\\review-fix\\demo_buggy.py\n统计：0 个类，4 个函数。\n发现以下可改进点：\n  - 第 1 行 函数 `add` 缺少 docstring。\n  - 第 5 行 函数 `load_config` 缺少 docstring。\n  - 第 11 行 函数 `safe_div` 缺少 docstring。\n  - 第 18 行 函数 `main` 缺少 docstring。\n  - 第 14 行 存在裸 `except:`，应捕获具体异常。\n  - 第 6 行 疑似硬编码密钥/密码，应改为环境变量或配置读取。\n  - 第 7 行 疑似硬编码密钥/密码，应改为环境变量或配置读取。\n  - 第 19 行 存在 TODO/FIXME 待办注释。\n\n建议：补充文档字符串、缩小函数规模、捕获具体异常、将敏感信息移出源码，可显著提升代码质量。",
+        "source": "offline"
+      }
+    },
+    "timestamp": "2026-10-25T22:29:43"
+  },
+  {
+    "sender": "fix_agent",
+    "receiver": "next",
+    "kind": "fix",
+    "payload": {
+      "agent": "fix_agent",
+      "result": {
+        "target": "output\\review-fix\\demo_buggy.py",
+        "fixed_count": 8,
+        "unfixable": [],
+        "source": "offline"
+      }
+    },
+    "timestamp": "2026-10-25T22:29:43"
+  },
+  {
+    "sender": "review_agent",
+    "receiver": "next",
+    "kind": "review",
+    "payload": {
+      "agent": "review_agent",
+      "result": {
+        "target": "output\\review-fix\\demo_buggy.py",
+        "issues": [],
+        "passed": true,
+        "report": "【代码审查报告】output\\review-fix\\demo_buggy.py\n统计：0 个类，4 个函数。\n未检测到明显问题，代码风格良好。",
+        "source": "offline"
+      }
+    },
+    "timestamp": "2026-10-25T22:29:43"
+  },
+  {
+    "sender": "fix_agent",
+    "receiver": "next",
+    "kind": "fix",
+    "payload": {
+      "agent": "fix_agent",
+      "result": {
+        "target": "output\\review-fix\\demo_buggy.py",
+        "fixed_count": 0,
+        "unfixable": [],
+        "source": "offline"
+      }
+    },
+    "timestamp": "2026-10-25T22:29:43"
+  }
+]
